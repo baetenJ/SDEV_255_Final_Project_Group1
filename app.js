@@ -27,3 +27,21 @@ app.use(morgan('dev'));
 app.get('/', (req, res) => {
     res.render('index', { title: 'Home'});
 });
+
+app.get('/signup', (req, res) => {
+    res.render('studentSignUp');
+});
+
+app.get('/courseentry', (req, res) => {
+    res.render('courseEntry');
+});
+
+app.get('/allcourses', (req, res) => {
+    res.render('allCourses');
+});
+
+
+// 404 page must be at bottom
+app.use((req, res) => {
+    res.status(404).render('404');
+});

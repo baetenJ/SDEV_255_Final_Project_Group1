@@ -1,3 +1,19 @@
-body {
-    background-color: yellow;
+/*  dark-brown: #614734 -- light-brown: #9f806b -- creme: #f0ead6 -- light-green: #778d60 -- dark-green: #6f7762 */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    display: inline;
+    padding: 5px 20px 5px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
 }
