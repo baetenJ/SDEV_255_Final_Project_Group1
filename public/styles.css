@@ -76,3 +76,12 @@ body::before {
   button:hover{
     transform: scale(1.1);
   }
+
+  footer
+{
+color: #614734; 
+font-size: .75em; 
+font-style: italic; 
+text-align: center; 
+padding: 1em;
+}
