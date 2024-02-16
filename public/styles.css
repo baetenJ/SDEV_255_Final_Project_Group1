@@ -26,12 +26,19 @@ body::before {
   }
   #welcome{
     background-color: #778d60;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 5px 5px 5px #1E1E1E;
+    padding-top: 1em;
   }
   h1{
     font-weight: bold;
   }
-  h3{
+  #info-paragraph{
     color: #f0ead6;
+    font-weight: bold;
+    font-size: 1.5em;
   }
   @media(min-width: 768px){
     .news-input {
@@ -41,4 +48,31 @@ body::before {
   #navmenu {
     color: #f0ead6;
     padding: 5;
+  }
+
+  #instructors {
+    background-color: #778d60;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 5px 5px 5px #1E1E1E;
+    padding-top: 1em;
+  }
+
+  hr{
+    border: 1px solid #f0ead6;
+  }
+
+  #portal{
+    background-color: #778d60;
+    color:#1E1E1E;
+    box-shadow: 2px 2px 2px #1E1E1E
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  button:hover{
+    transform: scale(1.1);
   }
