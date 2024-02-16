@@ -3,23 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Welcome | <%= title %></title>
+    <title>Welcome</title>
 </head>
 <body>
-
-        <h1>Welcome to Course Registration</h1>
-
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/signup">Sign-Up</a></li>
-                <li><a href="/courseentry">Course Entry</a></li>
-                <li><a href="/allcourses">All Courses</a></li>
-            </ul>
-        </nav>
-    </div>
-    
-</body>
-</html>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg py-3 fixed-top">
+      <div class="container">
+        <a href="/" class="navbar-brand" id="welcome-title">Welcome to Course Registration</a>
+  
+        <button 
+          class="navbar-toggler"
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navmenu"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+  
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/signup" class="nav-link">Student Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a href="/courseentry" class="nav-link">Instructor Course Registration</a>
+            </li>
+            <li class="nav-item">
+              <a href="/allcourses" class="nav-link">All Courses</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!--Student Sign Up-->
+    <section id="welcome" class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+      <div class="container">
+        <h1 class="text-center">
+          Welcome to your online portal for all things course registration!
+        </h1>
+        <h3 class="p-3 p-lg-0 pt-lg-3">
+          Below you will find information about how to sign up or register a course, whether you are a student or instructor.
+        </h3>
+      </div>
+    </section>
+  </body>
