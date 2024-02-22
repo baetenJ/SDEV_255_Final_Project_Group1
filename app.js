@@ -17,15 +17,18 @@ const app = express();
 // register view engine
 app.set('view engine', 'ejs');
 
-// listen for requests
-app.listen(3000);
+
 
 // middleware & static files
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }))
 app.use(morgan('dev'));
 
+// listen for requests
+app.listen(3000);
+
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home'});
+    res.sendFile("./views/index.html", {root: __dirname});
 });
 
 app.get('/signup', (req, res) => {
@@ -37,9 +40,13 @@ app.get('/courseentry', (req, res) => {
 });
 
 app.get('/allcourses', (req, res) => {
-    res.render('allCourses');
+    res.render('allCourses', { course_name: "Test"});
 });
 
+app.post('/allcourses', (req, res) => {
+    console.log(req.body.course_name);
+    res.send("hi")
+});
 
 // 404 page must be at bottom
 app.use((req, res) => {
