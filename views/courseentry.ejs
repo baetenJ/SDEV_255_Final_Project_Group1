@@ -3,23 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Course Entry</title>
 </head>
 <body>
 
-    <h1>Add Courses</h1>
-
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/signup">Sign-Up</a></li>
-                <li><a href="/courseentry">Course Entry</a></li>
-                <li><a href="/allcourses">All Courses</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg py-3 fixed-top">
+        <div class="container">
+          <a href="/" class="navbar-brand" id="welcome-title">Home</a>
     
+          <button 
+            class="navbar-toggler"
+            type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+    
+          <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="/signup" class="nav-link">Student Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a href="/courseentry" class="nav-link">Instructor Course Registration</a>
+              </li>
+              <li class="nav-item">
+                <a href="/allcourses" class="nav-link">All Courses</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr>
+
+          <!--Teacher Course Registration Information-->
+    <section id="welcome" class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+          <h1 class="text-center">
+            Teacher Course Registration
+          </h1>
+          <p class="p-3 p-lg-0 pt-lg-3 pb-lg-5" id="info-paragraph">
+            Below you will find a form to fill out for courses you would like to add to the student registration portal.
+          </p>
+        </div>
+      </section>
+      <hr>
+
+      <!--Registration Form-->
+      <section id="instructors" class="p-5">
+        <div class="container">
+          <h2 class="text-center text-black" style="font-weight: bold">Add Courses</h2>
+          <p class="lead text-center text-white mb-5" style="font-weight: bold">
+            All fields must be filled out before adding the course
+          </p>
+          <div class="row g-3">
+            <!--Student Sign Up-->
+            <div class="col-md-6 col-lg-12">
+              <div class="card bg-light">
+                <div class="card-body text-center">
+                  <i class="bi bi-backpack" style="font-size: 4em"></i>
+                  <form id="courseForm" action="./allcourses.ejs" method="post">
+                    <div class="form-group">
+                        <label for="courseName">Course Name:</label>
+                        <input type="text" class="form-control" name="course_name" id="courseName" placeholder="Type Course Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="courseDesc">Course Description</label>
+                        <textarea class="form-control" id="courseDesc" name="courseDesc" placeholder="Type Course Description" rows="3"></textarea>
+                      </div>
+                    <div class="form-group">
+                      <label for="subjectArea">Subject Area</label>
+                      <input type="text" class="form-control" id="subjectArea" placeholder="Informatics, IT, Software, etc...">
+                    </div>
+                    <div class="form-group">
+                        <label for="numCredits">Credits</label>
+                        <select class="form-control" id="numCredits">
+                            <option>Select Credit Number</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>  
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-outline-secondary text-white mx-1 mt-lg-3 mb-lg-3" id="addStudentCourse" style="font-style: italic">Add Course</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="/functions.js"></script>
 </body>
 </html>
